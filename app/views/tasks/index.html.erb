@@ -1,13 +1,39 @@
-<h1>Task List</h1>
+<div class="container-sm">
+  <h1>My tasks</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li><%= link_to task.name, task_path(task) %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.name, task_path(task) %></li>
+    <% end %>
+  </ul>
 
-<button>
-  <%= link_to "➕ New task", tasks_new_path  %>
-</button>
+  <button>
+    <%= link_to "➕ New task", tasks_new_path  %>
+  </button>
+</div>
 
+<div class="container-sm">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      First checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Second checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Third checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Fourth checkbox
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+      Fifth checkbox
+    </li>
+  </ul>
+</div>
 

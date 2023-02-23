@@ -1,11 +1,22 @@
+<div class="container">
+  <%= form_for(@task) do |f| %>
+    <div class="card">
+      <div class="card-body">
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+        <div class="mb-3">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :details %>
+          <%= f.text_field :details %>
+        </div>
 
+        <%= f.submit "+ New", class: "btn btn-primary" %>
+        <%= link_to 'All tasks', tasks_path, class: "btn btn-primary" %>
 
-<%= link_to "⬅️", tasks_path  %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

@@ -1,19 +1,20 @@
-<h1>task show page</h1>
+<div class="container-sm">
+  <div class="card">
+    <div class="card-body">
+      <ul>
+        <h3>  <%= @task.name %></h3>
+        <%= @task.details %>
+        <%= @task.completed %>
+      </ul>
 
-<ul>
-  <li> Name: <%= @task.name %></li>  
-  <li><%= @task.details %></li>  
-  <li><%= @task.completed %></li>  
-</ul>
-<ul>
-  <%= link_to "⬅️ All tasks", tasks_path  %>
-  <%= link_to "EDIT", task_edit_path  %>
-</ul>
-
-<%= link_to "DELETE", 
-  task_path(@task),   
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure"}
-%>
+      <ul>
+        <%= link_to 'Tasks', tasks_path, class: "btn btn-primary" %>
+        <%= link_to "Update", task_edit_path, class: "btn btn-primary"%>
+        <%= link_to "DELETE", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure"}, class: "btn btn-danger" %>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 
