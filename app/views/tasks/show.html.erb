@@ -5,5 +5,15 @@
   <li><%= @task.details %></li>  
   <li><%= @task.completed %></li>  
 </ul>
+<ul>
+  <%= link_to "⬅️ All tasks", tasks_path  %>
+  <%= link_to "EDIT", task_edit_path  %>
+</ul>
 
-<%= link_to "⬅️ All tasks", tasks_path  %>
+<%= link_to "DELETE", 
+  task_path(@task),   
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure"}
+%>
+
+
+
