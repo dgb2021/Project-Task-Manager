@@ -2,15 +2,15 @@
   <div class="card">
     <div class="card-body">
       <ul>
-        <h3>  <%= @task.name %></h3>
-        <%= @task.details %>
+        <h3>  <%= @task.name.capitalize %></h3>
+        <%= @task.details.capitalize %>
         <%= @task.completed %>
       </ul>
 
       <ul>
-        <%= link_to 'Tasks', tasks_path, class: "btn btn-primary" %>
+        <%= link_to 'All Tasks', tasks_path, class: "btn btn-primary" %>
         <%= link_to "Update", task_edit_path, class: "btn btn-primary"%>
-        <%= link_to "DELETE", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure"}, class: "btn btn-danger" %>
+        <%= link_to "Delete", task_path(@task), data: {turbo_method: :delete, turbo_confirm: "Are you sure"}, class: "btn btn-danger" %>
       </ul>
     </div>
   </div>

@@ -7,12 +7,12 @@
         <ul class="list-group">
           <li class="list-group-item">
             <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              <%= link_to task.name, task_path(task) %>
+              <%= link_to task.name.capitalize, task_path(task), style: 'color:black; text-decoration: none;' %>
           </li>
         </ul>
       <% end %>
       <div style="margin: 10px 0px">
-        <%= link_to "New", tasks_new_path, class: "btn btn-primary"  %>
+        <%= link_to "Add", tasks_new_path, class: "btn btn-primary"  %>
       </div>
     </div>
   </div>
