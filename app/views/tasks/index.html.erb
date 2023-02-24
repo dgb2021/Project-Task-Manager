@@ -1,4 +1,4 @@
-<div class="container-sm">
+<div class="container-sm" style="margin: 30px; width: 400px; height: 300px;">
   <div class="card">
     <div class="card-body">
       <h1>My tasks</h1>
@@ -11,7 +11,9 @@
           </li>
         </ul>
       <% end %>
+      <div style="margin: 10px 0px">
         <%= link_to "New", tasks_new_path, class: "btn btn-primary"  %>
+      </div>
     </div>
   </div>
 </div>
